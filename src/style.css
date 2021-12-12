@@ -1,4 +1,12 @@
-h1{color: aqua;}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{color: #878787;
+    font-size:24px;
+    font-weight:100;
+line-height: 28.8px;
+}
+
 .weather-app{
     max-width: 600px;
     margin: 30px auto;
