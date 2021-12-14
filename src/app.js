@@ -12,6 +12,11 @@ let day=days[date.getDay()];
 return`${day} ${hours}:${minutes}`;
 
 }
+function displayForecast(){
+    let forecastElement=document.querySelector("#forecast");
+
+    forecastElement.innerHTML="Forecast";
+}
 function displayTemperature(response){
 let temperatureElement=document.querySelector("#temperature");
 let cityElement=document.querySelector("#city");
@@ -21,7 +26,9 @@ let windElement=document.querySelector("#wind");
 let dateElement=document.querySelector("#date");
 let iconElement=document.querySelector("#icon");
 
-celciusTemperature= response.data.main.temp;
+celsiusTemperature= response.data.main.temp;
+
+
 
 temperatureElement.innerHTML=Math.round(response.data.main.temp);
 cityElement.innerHTML=response.data.name;
@@ -72,3 +79,4 @@ let celsiusLink=document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("New York");
+displayForecast();
