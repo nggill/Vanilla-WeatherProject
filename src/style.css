@@ -76,7 +76,7 @@ body {
   }
   
   .weather-temperature strong {
-    color: rgb(33, 33, 33);
+    color: white;
     font-size: 64px;
     line-height: 1;
     font-weight: 400;
@@ -86,11 +86,13 @@ body {
     position: relative;
     font-size: 16px;
     top: -34px;
+    color:white;
   }
   
   .weather-temperature .active {
-    color: rgb(33, 33, 33);
+    color:white;
     cursor: default;
+
   }
   
   .weather-temperature .active:hover {
@@ -100,7 +102,7 @@ body {
   .weather-forecast {
     margin-top: 20px;
     text-align: center;
-    color: #000;
+    color: white;
   }
   
   .weather-forecast-date {
@@ -110,6 +112,8 @@ body {
   
   .weather-forecast-temperature-min {
     opacity: 0.5;
+    color: grey;
+   
   }
   
   .weather-forecast-temperatures {
@@ -123,9 +127,11 @@ body {
 
   }
   .btn-primary:hover {
-    text-shadow: black 0px 0px 10px;
+
     background: #080c24ff;
     transition-delay: 200ms;
     color: #d6ffeb;
-border-color: #d6ffeb;
+    border-color: #d6ffeb;
   }
+ div .float-left{color:azure;}
+
