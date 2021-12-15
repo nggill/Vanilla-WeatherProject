@@ -1,3 +1,4 @@
+//Formatted date code
 function formatDate(timestamp){
 //calculate the date
 let date=new Date(timestamp);
@@ -12,11 +13,17 @@ let day=days[date.getDay()];
 return`${day} ${hours}:${minutes}`;
 
 }
+//Displaying Forcasting cards for next few days
 function displayForecast(){
     let forecastElement=document.querySelector("#forecast");
 
     forecastElement.innerHTML="Forecast";
 }
+function getForecast(coordinates){
+    let apiKey
+    let apiURL=`https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API key}`
+}
+//Calling temperature from API
 function displayTemperature(response){
 let temperatureElement=document.querySelector("#temperature");
 let cityElement=document.querySelector("#city");
@@ -39,6 +46,7 @@ dateElement.innerHTML=formatDate(response.data.dt *1000);
 iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 iconElement.setAttribute("alt",response.data.weather[0].description);
 }
+//Search bar function
 function search(city){
 
     let apiKey="23ae8af4580cf1669a4ba3e951eb0962";
@@ -50,6 +58,7 @@ function handleSubmit(event){event.preventDefault();
 let cityInputElement=document.querySelector("#city-input");
 search(cityInputElement.value);
 }
+//Unit conversion
 function displayFahrenheitTemperature(event){
     event.preventDefault();
     celsiusLink.classList.remove("active");
@@ -66,6 +75,9 @@ function displayCelsiusTemperature(event){
     let temperatureElement=document.querySelector("#temperature");
     temperatureElement.innerHTML= Math.round(celsiusTemperature);
 }
+
+
+getForecast(response.data.coord)
 
 let celsiusTemperature=null;
 
