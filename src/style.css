@@ -8,7 +8,7 @@ body {
   padding: 10px;
   border-radius: 10px;
   margin-top: 4px;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
   box-shadow: 0px 0px 30px 2px #1f7ea7ff;
 }
 .grid-container {
@@ -21,10 +21,11 @@ body {
   h1 {
     color: #d6ffeb;
     font-size: 24px;
-    font-weight: 100;
+    font-weight: 300;
     line-height: 28px;
-    margin-bottom: 0;
+    margin-bottom: 10px;
     text-align: center;
+    text-shadow:black;
   }
   .weather-forecast-date {
     border: 2px solid;
@@ -37,12 +38,12 @@ body {
   ul {
     margin: 0;
     padding: 0;
-  }
+ }
   
   li {
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 5px;
     text-align: center;
     color:#d6ffeb;
     font-size: 16px;
@@ -56,7 +57,7 @@ body {
   
   .weather-app-wrapper {
     max-width: 600px;
-    margin: 30px auto;
+    margin: 10px auto;
   }
   
   .weather-app {
@@ -101,8 +102,11 @@ body {
   
   .weather-forecast {
     margin-top: 20px;
+    margin-bottom: 10px;
     text-align: center;
     color: white;
+    background-color:gray ;
+    border-radius: 8px;
   }
   
   .weather-forecast-date {
@@ -133,5 +137,29 @@ body {
     color: #d6ffeb;
     border-color: #d6ffeb;
   }
+  .col-2{
+    background-color: blueviolet;
+  }
  div .float-left{color:azure;}
-
+ .grid-quotes {
+  background: #151e34ff;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 4px;
+  margin-bottom: 25px;
+  box-shadow: 0px 0px 15px 2px #adfc92;
+}
+.grid-music {
+  background: #151e34ff;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 4px;
+  margin-bottom: 25px;
+  box-shadow: 0px 0px 15px 2px #b49fcc;
+}
+.entertainment {
+  padding: 10px 20px 1px 20px;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
