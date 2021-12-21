@@ -123,31 +123,13 @@ celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("New York");
 
+let quote=document.querySelector("#quote");
+let author=document.querySelector("#author");
+let quoteButton=document.querySelector("#quote-btn");
 
-function displayQuote(response){
-  let quote=response.data.daily;
-      let quoteElement=document.querySelector("#quote");
-  
-      let quoteHTML = `<div class="row">`;
-      forecast.forEach(function (forecastDay, index) {
-        if (index < 6) {forecastHTML =
-          forecastHTML +
-          `
-          <div class="col-2">
-          <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
-          <img
-            src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
-            alt=""
-            width="42"
-          />
-          <div class="weather-forecast-temperatures">
-            <span class="weather-forecast-temperature-max">${Math.round(forecastDay.temp.max)}° </span>
-            <span class="weather-forecast-temperature-min"> ${Math.round(forecastDay.temp.min)}° </span>
-          </div>
-        </div>`;
-      }
-  });
-    
-      forecastHTML = forecastHTML + `</div>`;
-      forecastElement.innerHTML = forecastHTML;
-    }
+quoteButton.addEventListener("click", getQuote);
+
+function getQuote(){
+fetch("http://quotable.io/random")
+.then(res=>res.json()).then(data=>{quote.innerHTML=`"${data.content}"`;
+author.innerHTML=`-${data.author}`;})}

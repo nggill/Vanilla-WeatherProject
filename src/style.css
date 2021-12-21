@@ -104,9 +104,9 @@ body {
     margin-top: 20px;
     margin-bottom: 10px;
     text-align: center;
-    color: white;
-    background-color:gray ;
+    color: white;    
     border-radius: 8px;
+    border-color:#1f7ea7ff;
   }
   
   .weather-forecast-date {
@@ -123,24 +123,28 @@ body {
   .weather-forecast-temperatures {
     font-size: 13px;
   }
-  .btn-primary {
+ 
+  .btn-primary, #quote-btn {
+    color: #1f7ea7ff;
+    transition-delay: 100ms;
+    background-color: #151e34ff ;
+    border-color: #1f7ea7ff;
+    text-shadow: azure 4px;
+
+  }
+  .btn-primary:hover, #quote-btn:hover {
     border-color: #151e34ff;
     background-color:#d6ffeb ;
     color: black;
     transition: all 150ms ease-in-out;
-
-  }
-  .btn-primary:hover {
-
-    background: #080c24ff;
-    transition-delay: 200ms;
-    color: #d6ffeb;
-    border-color: #d6ffeb;
+border-radius: 4px;
   }
   .col-2{
     background-color: blueviolet;
+    border-radius: 10px;
   }
  div .float-left{color:azure;}
+ 
  .grid-quotes {
   background: #151e34ff;
   padding: 10px;
@@ -162,4 +166,9 @@ body {
   border-radius: 10px;
   margin-top: 10px;
   margin-bottom: 15px;
+}
+#quote-btn:hover {
+  background: #151e34ff ;
+  transition-delay: 200ms;
+  color: #adfc92;
 }
